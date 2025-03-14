@@ -60,6 +60,7 @@ disruptions, or unusual circumstances will be flagged for review
 3. **Hypothesis Testing**
     - **H₀**: Sleep duration and timing have no significant effect on cognitive performance.
     - **H₁**: Longer and more consistent sleep schedules improve reaction time.
+    
     Conduct correlation analysis to determine if sleep duration is significantly related to reaction time.
     Use regression models to quantify the effect of sleep duration on reaction time.
 
