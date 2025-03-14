@@ -27,24 +27,24 @@ sleep schedules for better cognitive efficiency.
     
 ## Data Set
 
-    The dataset for this project consists of three months of daily records. Here’s what I’ll be tracking:
+The dataset for this project consists of three months of daily records. Here’s what I’ll be tracking:
 
-    - **Date**: The specific day of the record
-    - **Sleeping Time**: The time I went to bed
-    - **Wake-Up Time**: The time I woke up
-    - **Total Sleep Duration**: Difference between sleep start and wake-up time (hours)
-    - **Reaction Time**: My Human Benchmark reaction time test result (ms) recorded immediately after waking up
+- **Date**: The specific day of the record
+- **Sleeping Time**: The time I went to bed
+- **Wake-Up Time**: The time I woke up
+- **Total Sleep Duration**: Difference between sleep start and wake-up time (hours)
+- **Reaction Time**: My Human Benchmark reaction time test result (ms) recorded immediately after waking up
     
-    Data will be self-reported daily in an Excel sheet to ensure consistency and accuracy. Outliers caused by illness, sleep
-    disruptions, or unusual circumstances will be flagged for review
+Data will be self-reported daily in an Excel sheet to ensure consistency and accuracy. Outliers caused by illness, sleep
+disruptions, or unusual circumstances will be flagged for review
 
 ## Tools and Technologies
 
-    - **Python**: For data cleaning and statistical analysis
-    - **Pandas**: To manipulate and preprocess data
-    - **Matplotlib**: For visualizing sleep trends and reaction time correlations
-    - **SciPy**: For hypothesis testing and regression analysis
-    - **Human Benchmark**: The online platform used to measure reaction time performance
+- **Python**: For data cleaning and statistical analysis
+- **Pandas**: To manipulate and preprocess data
+- **Matplotlib**: For visualizing sleep trends and reaction time correlations
+- **SciPy**: For hypothesis testing and regression analysis
+- **Human Benchmark**: The online platform used to measure reaction time performance
     
 ## Analysis Plan
 
