@@ -70,11 +70,11 @@ disruptions, or unusual circumstances will be flagged for review
     
 ## Conclusion
 
-    By the end of this project, I hope to answer the following questions:
+By the end of this project, I hope to answer the following questions:
     
-    - Does sleep duration significantly affect reaction time performance?
-    - Is reaction time improvement more influenced by total sleep duration or sleep schedule consistency?
-    - Can small, data-driven adjustments to my sleep schedule lead to measurable improvements in cognitive performance?
+- Does sleep duration significantly affect reaction time performance?
+- Is reaction time improvement more influenced by total sleep duration or sleep schedule consistency?
+- Can small, data-driven adjustments to my sleep schedule lead to measurable improvements in cognitive performance?
     
 This project is not just about understanding my own sleep habits—it’s about leveraging data science to optimize cognitive
 function. The insights gained may contribute to better sleep scheduling strategies for improved mental performance in various
