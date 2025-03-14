@@ -12,16 +12,16 @@ sleep schedules for better cognitive efficiency.
 
 ## Objectives
 
-1. **Understand Sleep-Cognition Relationship**
+1. **Understand Sleep-Cognition Relationship:**
    Examine the correlation between sleep duration, wake-up time, and reaction time performance.
     
-2. **Identify Key Sleep Factors**
+2. **Identify Key Sleep Factors:**
    Determine whether total sleep duration or consistency has a stronger impact on reaction time.
 
-3. **Data-Driven Optimization**
+3. **Data-Driven Optimization:**
    Use data analysis techniques to identify trends and provide insights into sleep habits that may enhance cognitive function.
 
-4. **Apply Data Science Skills**
+4. **Apply Data Science Skills:**
    Implement statistical modeling and regression analysis to derive meaningful conclusions about sleep’s impact on reaction
     time.
     
