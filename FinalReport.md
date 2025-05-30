@@ -51,6 +51,9 @@ The sleep duration data shows a roughly normal distribution with most nights fal
 Reaction time scores exhibit considerable day-to-day variability, ranging from 256ms to 412ms. This 156ms range represents significant cognitive performance variation, suggesting that multiple factors beyond sleep may influence daily cognitive function. The variability provides an opportunity to identify whether sleep patterns contribute meaningfully to this variation.
 
 #### 3. Sleep Pattern Categories
+
+Through feature engineering, sleep patterns were categorized into:
+
 - **Sleep Duration**:  
   - Very Short (<5h)  
   - Short (5–7h)  
@@ -68,8 +71,8 @@ Reaction time scores exhibit considerable day-to-day variability, ranging from 2
   - Very Late (>3 PM)
 
 #### 4. Temporal Patterns
-- Weekday vs. weekend performance showed minimal differences.
-- Sleep’s cognitive effect appears consistent across days.
+
+Analysis of weekend vs. weekday performance shows minimal differences in both actual and predicted reaction times, suggesting that sleep's impact on cognitive performance is consistent regardless of the day type. This finding supports the robustness of the sleep-cognition relationship analysis.
 
 ---
 
