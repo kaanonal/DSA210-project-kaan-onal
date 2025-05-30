@@ -1,4 +1,4 @@
-# DSA210 Project Final Report
+# DSA210 Project Final Report - Kaan Önal 32019
 
 ## Analyzing the Relationship Between Sleep Patterns and Cognitive Performance
 
@@ -31,8 +31,8 @@ The dataset consists of 78 daily records collected from March 14, 2025, to May 3
 - **Sample Size**: 78 observations  
 - **Sleep Duration Range**: 4.35 - 10.00 hours  
 - **Reaction Time Range**: 256 - 412 milliseconds  
-- **Average Sleep Duration**: ~7.5 hours  
-- **Average Reaction Time**: ~318 milliseconds  
+- **Average Sleep Duration**: 7.5 hours  
+- **Average Reaction Time**: 318 milliseconds  
 
 Measurement consistency was ensured by recording reaction time immediately upon waking.
 
@@ -84,8 +84,8 @@ Measurement consistency was ensured by recording reaction time immediately upon 
 - **Pearson correlation** between total sleep time and reaction time.
 
 #### Results
-- **Correlation Coefficient**: r = -0.071  
-- **P-value**: 0.66428  
+- **Correlation Coefficient**: r = -0.173  
+- **P-value**: 0.122 
 - **Statistical Significance**: Not significant (p > 0.05)
 
 **Interpretation**: No statistically significant relationship. The weak negative correlation suggests longer sleep duration is not predictive of improved reaction time.
