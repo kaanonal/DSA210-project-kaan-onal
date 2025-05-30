@@ -18,10 +18,10 @@ The analysis employs both traditional statistical hypothesis testing and modern 
 
 ### Dataset Overview
 
-The dataset consists of 78 daily records collected from March 14, 2025, to May 30, 2025. Each record contains:
+The dataset consists of 78 daily records collected from March 14, 2025, to May 30, 2025, representing a comprehensive three-month self-tracking study. Each record contains:
 
 - **Date**: Daily tracking period  
-- **Sleep Time**: Time of sleep onset  
+- **Sleep Time**: Time of sleep 
 - **Wake-Up Time**: Time of awakening  
 - **Total Sleep Duration**: Calculated sleep duration in hours  
 - **Human Benchmark Score**: Reaction time performance (milliseconds)
@@ -34,7 +34,7 @@ The dataset consists of 78 daily records collected from March 14, 2025, to May 3
 - **Average Sleep Duration**: 7.5 hours  
 - **Average Reaction Time**: 318 milliseconds  
 
-Measurement consistency was ensured by recording reaction time immediately upon waking.
+The data collection methodology ensured consistency by measuring reaction time immediately upon waking to minimize confounding factors such as caffeine consumption, physical activity, or time-of-day effects.
 
 ---
 
