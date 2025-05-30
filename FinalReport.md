@@ -80,18 +80,18 @@ Analysis of weekend vs. weekday performance shows minimal differences in both ac
 
 ### Primary Hypothesis: Sleep Duration and Cognitive Performance
 
-- **H₀**(Null): There is no significant correlation between total sleep duration and reaction time performance 
-- **H₁**(Alternative): There is a significant correlation between total sleep duration and reaction time performance
+- **H₀** (Null): There is no significant correlation between total sleep duration and reaction time performance 
+- **H₁** (Alternative): There is a significant correlation between total sleep duration and reaction time performance
 
 #### Methodology
-- **Pearson correlation** between total sleep time and reaction time.
+- **Pearson correlation** test was conducted to evaluate the linear relationship between total sleep time (hours) and Human Benchmark reaction time scores (milliseconds). This statistical approach provides a direct measure of the strength and direction of any linear association.
 
 #### Results
 - **Correlation Coefficient**: r = -0.173  
 - **P-value**: 0.122 
 - **Statistical Significance**: Not significant (p > 0.05)
 
-**Interpretation**: No statistically significant relationship. The weak negative correlation suggests longer sleep duration is not predictive of improved reaction time.
+**Interpretation**: The analysis failed to reject the null hypothesis, indicating no statistically significant correlation between sleep duration and reaction time performance. The weak negative correlation (r = -0.173) suggests that longer sleep duration has virtually no predictive relationship with better (lower) reaction times. The high p-value (0.122) confirms that this relationship could easily be due to random chance rather than a true underlying association.
 
 ---
 
@@ -99,15 +99,17 @@ Analysis of weekend vs. weekday performance shows minimal differences in both ac
 
 ### Objective
 
-To build models predicting reaction time based on sleep-related features.
+The machine learning component aimed to build predictive models to estimate reaction time performance based on engineered sleep features. By evaluating multiple algorithms, the analysis sought to determine whether complex, non-linear relationships exist between sleep patterns and cognitive performance that simple correlation analysis might miss.
 
 ### Feature Engineering
 
-- Categorical variables (sleep duration, timing)
-- One-hot encoding
-- Temporal features (weekday/weekend)
-- Sleep quality indicators (sleep debt, consistency)
-- Rolling averages (3-day, 7-day)
+To enhance model performance and capture nuanced sleep patterns, several engineered features were created:
+
+- **Categorical Sleep Variables**: Sleep timing, wake timing, and duration categories
+- **One-Hot Encoding**: Transformation of categorical variables into binary indicators
+- **Temporal Features**: Weekend/weekday indicators and day-of-week variables
+- **Sleep Quality Indicators**: Sleep debt calculations and consistency metrics
+- **Rolling Averages**: 3-day and 7-day sleep duration averages to capture consistency effects
 
 ### Models Evaluated
 
