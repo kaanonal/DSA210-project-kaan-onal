@@ -80,8 +80,8 @@ Analysis of weekend vs. weekday performance shows minimal differences in both ac
 
 ### Primary Hypothesis: Sleep Duration and Cognitive Performance
 
-- **H₀**: No significant correlation between total sleep duration and reaction time  
-- **H₁**: Significant correlation exists
+- **H₀**(Null): There is no significant correlation between total sleep duration and reaction time performance 
+- **H₁**(Alternative): There is a significant correlation between total sleep duration and reaction time performance
 
 #### Methodology
 - **Pearson correlation** between total sleep time and reaction time.
