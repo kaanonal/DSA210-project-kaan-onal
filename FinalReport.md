@@ -43,12 +43,12 @@ The data collection methodology ensured consistency by measuring reaction time i
 ### Key Insights from Data Exploration
 
 #### 1. Sleep Duration Distribution
-- Roughly normal distribution centered between 6-9 hours.
-- Some nights <5 hours or >9 hours — good variance for analysis.
+
+The sleep duration data shows a roughly normal distribution with most nights falling between 6-9 hours. There are notable instances of both very short sleep (under 5 hours) and extended sleep (over 9 hours), providing good variance for analysis. The distribution suggests typical adult sleep patterns with occasional deviations due to lifestyle factors.
 
 #### 2. Reaction Time Variability
-- Range: 256ms to 412ms (156ms variation).
-- Indicates high day-to-day variability.
+
+Reaction time scores exhibit considerable day-to-day variability, ranging from 256ms to 412ms. This 156ms range represents significant cognitive performance variation, suggesting that multiple factors beyond sleep may influence daily cognitive function. The variability provides an opportunity to identify whether sleep patterns contribute meaningfully to this variation.
 
 #### 3. Sleep Pattern Categories
 - **Sleep Duration**:  
