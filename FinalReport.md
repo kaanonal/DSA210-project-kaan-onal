@@ -128,12 +128,16 @@ Achieved the lowest RMSE (39.53) and highest R² (-0.2847) among all models
 The negative R² value indicates that the model performs worse than simply predicting the mean reaction time for all observations
 Despite being the "best" model, it demonstrates that sleep features are not predictive of reaction time performance
 
-All models produced negative R² scores, which is a significant finding indicating that:
+- All models produced negative R² scores, which is a significant finding indicating that:
 
-- **No Predictive Relationship**: Sleep patterns do not reliably predict cognitive performance
-- **Model Limitations**: The engineered features, despite their sophistication, fail to capture meaningful relationships
-- **Baseline Comparison**: Simply predicting the average reaction time (318ms) would outperform all trained models
+**No Predictive Relationship**: Sleep patterns do not reliably predict cognitive performance
+**Model Limitations**: The engineered features, despite their sophistication, fail to capture meaningful relationships
+**Baseline Comparison**: Simply predicting the average reaction time (318ms) would outperform all trained models
 
+- The consistently poor model performance across different algorithms suggests that reaction time variability is driven by factors not captured in sleep data alone. This could include:
+
+External environmental factors
+Non-sleep related cognitive influences (stress, motivation, etc.)
 
 ---
 
