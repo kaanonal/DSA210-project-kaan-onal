@@ -1,4 +1,10 @@
-## Final Project Overview
+# DSA210 Project Final Report
+
+## Analyzing the Relationship Between Sleep Patterns and Cognitive Performance
+
+---
+
+## Introduction
 
 The relationship between sleep and cognitive performance has been a subject of scientific interest for decades, with implications for academic performance, workplace productivity, and overall well-being. This project investigates how personal sleep patterns affect cognitive function, specifically reaction time performance, through a systematic data-driven approach spanning 78 days of self-collected data.
 
@@ -6,31 +12,19 @@ This study examines the correlation between various sleep metrics (sleep duratio
 
 The analysis employs both traditional statistical hypothesis testing and modern machine learning approaches to evaluate whether sleep patterns significantly influence cognitive performance, and to identify which sleep-related factors are most predictive of reaction time outcomes.
 
-## Objectives
+---
 
-1. **Understand Sleep-Cognition Relationship:**  
-   Evaluate whether common assumptions about the sleep-cognition link hold true through a systematic self-study.
-
-2. **Explore Predictive Sleep Features:**  
-   Identify which aspects of sleep behavior (timing, consistency, duration) might predict cognitive function.
-
-3. **Apply Analytical Techniques:**  
-   Use both hypothesis testing and machine learning to model reaction time based on sleep features.
-
-4. **Contribute to Scientific Inquiry:**  
-   Present findings—positive or negative—to contribute to a nuanced understanding of how sleep affects mental performance.
-
-## Data Set
+## Data Description
 
 ### Dataset Overview
 
-The dataset consists of 78 daily records collected from March 14, 2025, to May 30, 2025, representing a comprehensive three-month self-tracking study. Each record contains:
+The dataset consists of 78 daily records collected from March 14, 2025, to May 30, 2025. Each record contains:
 
 - **Date**: Daily tracking period  
 - **Sleep Time**: Time of sleep onset  
 - **Wake-Up Time**: Time of awakening  
 - **Total Sleep Duration**: Calculated sleep duration in hours  
-- **Human Benchmark Score**: Reaction time performance (milliseconds)  
+- **Human Benchmark Score**: Reaction time performance (milliseconds)
 
 ### Data Characteristics
 
@@ -40,119 +34,157 @@ The dataset consists of 78 daily records collected from March 14, 2025, to May 3
 - **Average Sleep Duration**: ~7.5 hours  
 - **Average Reaction Time**: ~318 milliseconds  
 
-The data collection methodology ensured consistency by measuring reaction time immediately upon waking to minimize confounding factors such as caffeine consumption, physical activity, or time-of-day effects.
+Measurement consistency was ensured by recording reaction time immediately upon waking.
 
-## Tools and Technologies
+---
 
-- **Python**: For scripting and data analysis  
-- **Pandas & NumPy**: Data manipulation and statistics  
-- **Matplotlib & Seaborn**: Visualization of sleep-reaction trends  
-- **Scikit-learn**: Machine learning modeling  
-- **Human Benchmark**: Reaction time test platform  
-- **Statistical Libraries**: For correlation analysis and hypothesis testing  
+## Exploratory Data Analysis
 
-## Analysis Plan
+### Key Insights from Data Exploration
 
-### Exploratory Data Analysis
+#### 1. Sleep Duration Distribution
+- Roughly normal distribution centered between 6-9 hours.
+- Some nights <5 hours or >9 hours — good variance for analysis.
 
-1. **Sleep Duration Distribution**  
-   Shows a roughly normal distribution (6-9 hours typical); outliers on both ends provide variability.
+#### 2. Reaction Time Variability
+- Range: 256ms to 412ms (156ms variation).
+- Indicates high day-to-day variability.
 
-2. **Reaction Time Variability**  
-   Day-to-day scores range widely (256ms–412ms); suggests multiple factors at play.
+#### 3. Sleep Pattern Categories
+- **Sleep Duration**:  
+  - Very Short (<5h)  
+  - Short (5–7h)  
+  - Optimal (7–9h)  
+  - Long (>9h)  
+- **Sleep Timing**:  
+  - Very Early (<2 AM)  
+  - Early (2–4 AM)  
+  - Normal (4–6 AM)  
+  - Late (>6 AM)  
+- **Wake Timing**:  
+  - Early (<9 AM)  
+  - Normal (9–12 PM)  
+  - Late (12–3 PM)  
+  - Very Late (>3 PM)
 
-3. **Sleep Pattern Categories**  
-   - **Duration**: Very Short (<5h), Short (5-7h), Optimal (7-9h), Long (>9h)  
-   - **Sleep Timing**: Very Early (<2 AM), Early (2-4 AM), Normal (4-6 AM), Late (>6 AM)  
-   - **Wake Timing**: Early (<9 AM), Normal (9-12 PM), Late (12-3 PM), Very Late (>3 PM)
+#### 4. Temporal Patterns
+- Weekday vs. weekend performance showed minimal differences.
+- Sleep’s cognitive effect appears consistent across days.
 
-4. **Temporal Patterns**  
-   No major differences between weekday/weekend reaction times; sleep-cognition effects remain stable.
+---
 
-### Hypothesis Testing
+## Hypothesis Testing
 
-- **H₀**: No correlation between sleep duration and reaction time  
-- **H₁**: Longer sleep improves reaction time  
+### Primary Hypothesis: Sleep Duration and Cognitive Performance
 
-- **Method**: Pearson correlation  
-- **Result**:  
-  - Correlation Coefficient: r = -0.071  
-  - P-value: 0.66428  
-  - **Interpretation**: No significant correlation (p > 0.05). Weak negative relationship likely due to chance.
+- **H₀**: No significant correlation between total sleep duration and reaction time  
+- **H₁**: Significant correlation exists
 
-### Machine Learning Analysis
+#### Methodology
+- **Pearson correlation** between total sleep time and reaction time.
 
-**Goal**: Build predictive models for reaction time based on sleep features.
+#### Results
+- **Correlation Coefficient**: r = -0.071  
+- **P-value**: 0.66428  
+- **Statistical Significance**: Not significant (p > 0.05)
 
-**Feature Engineering**:
-- Sleep timing/duration/wake-time categories
+**Interpretation**: No statistically significant relationship. The weak negative correlation suggests longer sleep duration is not predictive of improved reaction time.
+
+---
+
+## Machine Learning Analysis
+
+### Objective
+
+To build models predicting reaction time based on sleep-related features.
+
+### Feature Engineering
+
+- Categorical variables (sleep duration, timing)
 - One-hot encoding
-- Temporal flags (weekend, day-of-week)
-- Rolling averages
-- Sleep debt and consistency
+- Temporal features (weekday/weekend)
+- Sleep quality indicators (sleep debt, consistency)
+- Rolling averages (3-day, 7-day)
 
-**Models Evaluated** (Train/Test = 80/20 split):
+### Models Evaluated
 
-| Model            | MAE   | RMSE  | R² Score  |
-|------------------|-------|-------|-----------|
-| Random Forest    | 30.96 | 39.53 | -0.2847   |
-| Linear Regression| 33.65 | 41.24 | -0.3982   |
-| K-Neighbors      | 33.29 | 42.24 | -0.4669   |
-| Decision Tree    | 42.67 | 52.98 | -1.3072   |
+| Model           | MAE   | RMSE  | R² Score |
+|----------------|-------|-------|----------|
+| Random Forest  | 30.96 | 39.53 | -0.2847  |
+| Linear Regression | 33.65 | 41.24 | -0.3982  |
+| K-Neighbors    | 33.29 | 42.24 | -0.4669  |
+| Decision Tree  | 42.67 | 52.98 | -1.3072  |
 
-**Findings**:
-- All models had **negative R²**, meaning worse than baseline (mean prediction).
-- **No predictive relationship** found between sleep patterns and reaction time.
-- **Random Forest** was best among the models but still ineffective.
+### Interpretation
 
-### Result Summary
+- **Random Forest** performed best but still had **negative R²**, indicating worse performance than predicting the mean.
+- All models underperformed, suggesting:
+  - Sleep features are not predictive
+  - Significant influence from external factors (stress, environment, physiology, etc.)
 
-- **No strong correlation** between sleep and reaction time.
-- **Sleep categories** (short, optimal, long) didn't show consistent performance differences.
-- **Models failed** to predict accurately, reinforcing the weak sleep-cognition relationship.
+---
 
-## Conclusion
+## Results and Discussion
 
 ### Key Findings
 
-- No significant correlation between sleep duration and cognitive performance.
-- Machine learning models failed to find meaningful patterns.
-- Cognitive performance likely affected more by individual or external factors than by sleep alone.
+- **No significant correlation** between sleep duration and cognitive performance (r = -0.071, p = 0.66)
+- **Poor predictive models** — all worse than the mean
+- **High variability** likely driven by non-sleep factors
+- **Sleep categories** show no clear trends
 
 ### Scientific Implications
 
-- Duration may not be enough—sleep **quality**, **stages**, and **individual needs** might be more relevant.
-- Reaction time may not be sensitive enough or is influenced by too many variables.
+- Simple sleep metrics are insufficient
+- Individual differences likely dominate
+- Reaction time may not be sensitive enough
 
 ### Practical Implications
 
-- Focus on **consistency and quality**, not just duration.
-- Results caution against expecting major performance improvements solely from more sleep.
-- Consider **personalized sleep strategies** and **comprehensive metrics**.
+- Prioritize **consistency and quality** over raw duration
+- Don’t expect drastic gains from more sleep alone
+- More comprehensive measurements are needed for clearer insights
 
-## Recommendations
+---
 
-1. **Longer Tracking Periods**  
-   6+ months of data may reveal subtler trends.
+## Conclusions and Recommendations
 
-2. **Multiple Cognitive Measures**  
-   Use additional tasks (e.g., memory, attention) to diversify evaluation.
+### Primary Conclusions
 
-3. **Advanced Sleep Metrics**  
-   Include quality, regularity, and environment (light, noise, etc.).
+- **Sleep duration alone is not predictive** of cognitive performance
+- The relationship is **complex and multifactorial**
+- **Individual variability** plays a major role
 
-4. **Personalization**  
-   Develop individualized models to understand unique sleep-performance dynamics.
+### Recommendations for Future Research
+
+- **Extended Tracking**:
+  - >6 months, multiple cognitive metrics, sleep quality details  
+- **Feature Improvements**:
+  - Sleep regularity, chronotype, environmental context  
+- **Methodological Enhancements**:
+  - Controlled sleep schedules, physiological data, multiple daily tests  
+- **Personalized Models**:
+  - Optimal durations per individual, genetic sleep predispositions
+
+### Practical Applications
+
+- Maintain consistent sleep schedules  
+- Monitor subjective quality, not just hours  
+- Avoid universal sleep rules in workplaces or schools  
+
+---
 
 ## Final Insights
 
-This study demonstrates that simplistic assumptions about sleep and performance can be misleading. While sleep clearly affects cognition, its influence may not be easily captured through duration alone or simple tests. Nuanced analysis, personalized modeling, and broader data are required to truly understand and optimize the sleep-cognition connection.
+This study challenges assumptions about sleep’s role in daily cognition. While sleep matters, **simple duration metrics** don't capture the full picture. Personalization and more sophisticated methods are key to uncovering meaningful patterns.
+
+---
 
 ## References
 
-- Human Benchmark Platform – Used for standardized reaction time measurements  
-- Python Data Analysis Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn  
-- Statistical Methods: Pearson correlation analysis, hypothesis testing frameworks  
-- Machine Learning Algorithms: Random Forest, Decision Tree, Linear Regression, K-Nearest Neighbors  
-- Feature Engineering Techniques: One-hot encoding, categorical variable transformation, rolling averages  
-- Data Visualization: Matplotlib and Seaborn for exploratory data analysis and results presentation
+- **Human Benchmark Platform** – Reaction time tests  
+- **Python Libraries** – Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn  
+- **Statistical Methods** – Pearson correlation, hypothesis testing  
+- **ML Models** – Random Forest, Decision Tree, Linear Regression, KNN  
+- **EDA Tools** – One-hot encoding, categorical binning, rolling averages  
+- **Visualization** – Matplotlib, Seaborn  
