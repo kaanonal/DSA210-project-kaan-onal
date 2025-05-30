@@ -122,7 +122,12 @@ To enhance model performance and capture nuanced sleep patterns, several enginee
 
 ### Interpretation
 
-- **Random Forest** performed best but still had **negative R²**, indicating worse performance than predicting the mean.
+- **Random Forest** (best performing model)
+- 
+Achieved the lowest RMSE (39.53) and highest R² (-0.2847) among all models
+The negative R² value indicates that the model performs worse than simply predicting the mean reaction time for all observations
+Despite being the "best" model, it demonstrates that sleep features are not predictive of reaction time performance
+
 - All models underperformed, suggesting:
   - Sleep features are not predictive
   - Significant influence from external factors (stress, environment, physiology, etc.)
