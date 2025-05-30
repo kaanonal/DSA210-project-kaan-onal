@@ -124,20 +124,20 @@ To enhance model performance and capture nuanced sleep patterns, several enginee
 
 - **Random Forest** (best performing model)
   
-      Achieved the lowest RMSE (39.53) and highest R² (-0.2847) among all models
-      The negative R² value indicates that the model performs worse than simply predicting the mean reaction time for all observations
-      Despite being the "best" model, it demonstrates that sleep features are not predictive of reaction time performance
+  Achieved the lowest RMSE (39.53) and highest R² (-0.2847) among all models
+  The negative R² value indicates that the model performs worse than simply predicting the mean reaction time for all observations
+  Despite being the "best" model, it demonstrates that sleep features are not predictive of reaction time performance
 
 - All models produced negative R² scores, which is a significant finding indicating that:
 
-**No Predictive Relationship**: Sleep patterns do not reliably predict cognitive performance
-**Model Limitations**: The engineered features, despite their sophistication, fail to capture meaningful relationships
-**Baseline Comparison**: Simply predicting the average reaction time (318ms) would outperform all trained models
+  **No Predictive Relationship**: Sleep patterns do not reliably predict cognitive performance
+  **Model Limitations**: The engineered features, despite their sophistication, fail to capture meaningful relationships
+  **Baseline Comparison**: Simply predicting the average reaction time (318ms) would outperform all trained models
 
 - The consistently poor model performance across different algorithms suggests that reaction time variability is driven by factors not captured in sleep data alone. This could include:
 
-External environmental factors
-Non-sleep related cognitive influences (stress, motivation, etc.)
+  External environmental factors
+  Non-sleep related cognitive influences (stress, motivation, etc.)
 
 ---
 
@@ -145,55 +145,34 @@ Non-sleep related cognitive influences (stress, motivation, etc.)
 
 ### Key Findings
 
-- **No significant correlation** between sleep duration and cognitive performance (r = -0.071, p = 0.66)
+- **No significant correlation** between sleep duration and cognitive performance (r = -0.173, p = 0.122)
 - **Poor predictive models** — all worse than the mean
 - **High variability** likely driven by non-sleep factors
 - **Sleep categories** show no clear trends
 
 ### Scientific Implications
 
-- Simple sleep metrics are insufficient
-- Individual differences likely dominate
-- Reaction time may not be sensitive enough
-
-### Practical Implications
-
-- Prioritize **consistency and quality** over raw duration
-- Don’t expect drastic gains from more sleep alone
-- More comprehensive measurements are needed for clearer insights
+- **Complexity of Sleep-Cognition Relationship**: The absence of a clear relationship suggests that the sleep-cognition connection may be more complex than simple duration-based metrics can capture. Sleep quality, sleep stages, and individual sleep needs may be more important than total duration.
+- **Individual Differences**: The large unexplained variance in reaction times suggests significant individual differences in how sleep affects cognitive performance. What constitutes "optimal" sleep may vary considerably between individuals.
+- **Measurement Considerations**: Reaction time, while a valid cognitive measure, may not be sensitive enough to detect subtle sleep-related performance changes, or may be influenced by too many confounding factors to show clear sleep relationships.
 
 ---
 
-## Conclusions and Recommendations
+## Conclusions
 
 ### Primary Conclusions
 
-- **Sleep duration alone is not predictive** of cognitive performance
-- The relationship is **complex and multifactorial**
-- **Individual variability** plays a major role
-
-### Recommendations for Future Research
-
-- **Extended Tracking**:
-  - >6 months, multiple cognitive metrics, sleep quality details  
-- **Feature Improvements**:
-  - Sleep regularity, chronotype, environmental context  
-- **Methodological Enhancements**:
-  - Controlled sleep schedules, physiological data, multiple daily tests  
-- **Personalized Models**:
-  - Optimal durations per individual, genetic sleep predispositions
-
-### Practical Applications
-
-- Maintain consistent sleep schedules  
-- Monitor subjective quality, not just hours  
-- Avoid universal sleep rules in workplaces or schools  
+- **Sleep Duration is Not Predictive**: Within the normal range of sleep durations (4-10 hours), total sleep time does not significantly predict cognitive performance as measured by reaction time.
+- **Complex Relationships Require Nuanced Analysis**: The sleep-cognition relationship appears more complex than can be captured through simple duration metrics and basic machine learning features.
+- **Individual Factors Dominate**: Day-to-day cognitive performance variation is primarily driven by factors other than basic sleep metrics.  
 
 ---
 
 ## Final Insights
 
-This study challenges assumptions about sleep’s role in daily cognition. While sleep matters, **simple duration metrics** don't capture the full picture. Personalization and more sophisticated methods are key to uncovering meaningful patterns.
+This study demonstrates the importance of rigorous data analysis in challenging common assumptions. While sleep undoubtedly affects cognitive function, the relationship is more nuanced than simple duration-based metrics suggest. The findings emphasize the need for personalized approaches to sleep optimization and highlight the complexity of human cognitive performance.
+
+The negative results are scientifically valuable, as they help refine our understanding of sleep-cognition relationships and guide future research toward more sophisticated measurement and analysis approaches.
 
 ---
 
